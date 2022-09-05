@@ -1,0 +1,23 @@
+**/lib/
+**/target/
+**/.classpath
+**/.project
+**/.settings/
+/tmp/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Frontend libs
+!frontend-edge-service/frontend/**/lib
+*.flattened-pom.xml

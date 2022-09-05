@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: earliest
+  cloud:
+    function:
+      definition: process
+    stream:
+      function:
+        routing-expression: "headers['payload']['id'] % 2 == 0 : 'even' : 'odd' "
+      kafka:
+        binder:
+          functions:
+            process:
+              applicationId: MyGroupIdUsingApplicationId
+      bindings:
+        process-in-0:
+          destination: flicc.flicc_product_yadn.t_prods_product_iri
