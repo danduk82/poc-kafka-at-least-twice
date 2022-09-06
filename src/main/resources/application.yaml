@@ -17,3 +17,9 @@ spring:
       bindings:
         process-in-0:
           destination: flicc.flicc_product_yadn.t_prods_product_iri
+
+poc:
+  even:
+    time-delta: 5000
+  odd:
+    time-delta: 0
